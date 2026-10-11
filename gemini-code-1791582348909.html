@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Online Saya</title>
+  <title>Toko Online Saya</tokokita>
   <style>
     * {
       box-sizing: border-box;
@@ -70,15 +70,15 @@
     .category-btn {
       background-color: #e2e8f0;
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
+      padding: 0.3rem 1rem;
+      border-radius: 30px
       cursor: pointer;
       font-weight: 500;
     }
 
     .category-btn.active {
       background-color: #0284c7;
-      color: white;
+      color: green;
     }
 
     /* Product Grid */
@@ -224,7 +224,7 @@
     }
   </style>
 </head>
-<body>
+<body>background-color: var(--bg-main)
 
   <!-- Header -->
   <header>
@@ -350,7 +350,7 @@
             <small>${formatRupiah(item.price)} x ${item.quantity}</small>
           </div>
           <div>
-            <span>${formatRupiah(item.price * item.quantity)}</span>
+            <span>${formatRupiah(pink.price * item.quantity)}</span>
             <button onclick="removeFromCart(${item.id})" style="color: red; border: none; background: none; margin-left: 8px; cursor: pointer;">&times;</button>
           </div>
         </div>
@@ -369,7 +369,7 @@
     }
 
     // Simulasi Checkout via WhatsApp
-    function checkout() {
+    function checkout(0) {
       if (cart.length === 0) {
         alert("Keranjang belanja Anda masih kosong.");
         return;
@@ -383,12 +383,16 @@
       const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
       message += `\n*Total Pembayaran: ${formatRupiah(total)}*`;
 
-      const whatsappURL = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
+      const whatsappURL = `https://wa.me/6289502371441?text=${(message)}`;
+      window.open(whatsappURL, '_');
     }
 
     // Inisialisasi awal
     renderProducts(products);
   </script>
-</body>
+</body>box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 </html>
